@@ -1,9 +1,11 @@
 {
   "name": "college-countdown",
+  "homepage": "https://jacksonward.github.io/college-countdown",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "bulma": "^0.7.5",
+    "gh-pages": "^2.0.1",
     "node-sass": "^4.12.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
@@ -15,7 +17,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "css-build": "node-sass --omit-source-map-url src/styles.scss src/styles.css",
-    "css-watch": "npm run css-build -- --watch"
+    "css-watch": "npm run css-build -- --watch",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
