@@ -7,15 +7,17 @@ export default class Countdown extends Component {
 
     constructor() {
         super()
+        // init countdown
         this.state = {
-            days: 0,
-            hours: 0,
-            minutes: 0,
-            seconds: 0
+            days: Math.floor((countDownDate - new Date().getTime()) / (1000 * 60 * 60 * 24)),
+            hours: Math.floor((countDownDate - new Date().getTime()) % (1000 * 60 * 60 * 24) / (1000 * 60 * 60)),
+            minutes: Math.floor((countDownDate - new Date().getTime()) % (1000 * 60 * 60) / (1000 * 60)),
+            seconds: Math.floor((countDownDate - new Date().getTime()) % (1000 * 60) / 1000)
         }
     }
 
     componentDidMount() {
+        // update countdown every second
         this.interval = setInterval(() => {
             let now = new Date().getTime()
             // Find the distance between now and the count down date
@@ -35,11 +37,19 @@ export default class Countdown extends Component {
 
     render() {
         return (
-            <div>
-                <p>{this.state.days}</p>
-                <p>{this.state.hours}</p>
-                <p>{this.state.minutes}</p>
-                <p>{this.state.seconds}</p>
+            <div className="container columns is-centered is-size-3 has-text-centered">
+                <span className='column has-text-primary'>
+                    {this.state.days} {(this.state.days === 1) ? "day" : "days"}
+                </span>
+                <span className='column has-text-info'>
+                    {this.state.hours} {(this.state.hours === 1) ? "hour" : "hours"}
+                </span>
+                <span className='column has-text-link'>
+                    {this.state.minutes} {(this.state.minutes === 1) ? "minute" : "minutes"}
+                </span>
+                <span className='column has-text-success'>
+                    {this.state.seconds} {(this.state.seconds === 1) ? "second" : "seconds"}
+                </span>
             </div>
         )
     }

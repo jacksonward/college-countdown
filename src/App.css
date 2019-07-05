@@ -1,3 +1,18 @@
-#app {
-    
+.app {
+    display: flex;
+    height: 100vh;
+}
+
+.v-centered {
+    display: flex;
+    align-items: center;
+}
+
+span {
+    padding: 1rem;
+}
+
+.num {
+    border-radius: 10px;
+    padding: 5px;
 }

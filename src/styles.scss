@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+// Import a Google Font
+@import url('https://fonts.googleapis.com/css?family=DM+Serif+Display&display=swap');
+@import "../node_modules/bulma/sass/utilities/initial-variables";
+@import "../node_modules/bulma/sass/utilities/functions";
+
+// Set your brand colors
+/* RGB */
+/* RGB */
+$color1: rgba(11, 32, 39, 1);
+$color2: rgba(64, 121, 140, 1);
+$color3: rgba(112, 169, 161, 1);
+$color4: rgba(177, 183, 170, 1);
+$color5: rgba(246, 241, 209, 1);
+
+$color6: rgba(152, 68, 71, 1);
+$color6a: rgba(152, 68, 71, .5);
+
+// Update Bulma's global variables
+$family-primary: 'DM Serif Display', serif;
+$primary: $color1;
+$info: $color2;
+$link: $color3;
+$dark: $color6;
+$light: $color6a;
+$success: $color4;
+$body-background-color: $color5;
+$widescreen-enabled: false;
+$fullhd-enabled: true;
+
+@import '../node_modules/bulma/bulma.sass';
