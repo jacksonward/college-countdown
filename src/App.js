@@ -10,7 +10,7 @@ function App() {
         <div className="column is-5">
             <Countdown/>
             <div className="columns container is-centered">
-                <p className="has-text-dark">Until Fay!</p>
+                <p className="has-text-dark has-text-centered">Until Fay!</p>
             </div>
         </div>
     </div>
