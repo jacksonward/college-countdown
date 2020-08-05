@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 // Set the date we're counting down to
-let countDownDate = new Date("Aug 17, 2020 00:00:00").getTime();
+let countDownDate = new Date("Aug 15, 2020 00:00:00").getTime();
 
 export default class Countdown extends Component {
 
